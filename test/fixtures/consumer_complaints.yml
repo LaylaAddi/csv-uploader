@@ -1,0 +1,41 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date_received: 2016-08-27
+  product: MyString
+  sub_product: MyString
+  issue: MyString
+  sub_issue: MyString
+  consumer_complaint_narrative: MyString
+  company_public_response: MyString
+  company: MyString
+  state: MyString
+  zip_code: MyString
+  tags: MyString
+  consumer_consent_provided: MyString
+  submitted_via: MyString
+  date_sent_to_company: 2016-08-27
+  company_response_to_consumer: MyString
+  timely_response: false
+  consumer_disputed: false
+  complaint_id: 1
+
+two:
+  date_received: 2016-08-27
+  product: MyString
+  sub_product: MyString
+  issue: MyString
+  sub_issue: MyString
+  consumer_complaint_narrative: MyString
+  company_public_response: MyString
+  company: MyString
+  state: MyString
+  zip_code: MyString
+  tags: MyString
+  consumer_consent_provided: MyString
+  submitted_via: MyString
+  date_sent_to_company: 2016-08-27
+  company_response_to_consumer: MyString
+  timely_response: false
+  consumer_disputed: false
+  complaint_id: 1

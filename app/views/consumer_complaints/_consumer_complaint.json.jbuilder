@@ -1,0 +1,2 @@
+json.extract! consumer_complaint, :id, :date_received, :product, :sub_product, :issue, :sub_issue, :consumer_complaint_narrative, :company_public_response, :company, :state, :zip_code, :tags, :consumer_consent_provided, :submitted_via, :date_sent_to_company, :company_response_to_consumer, :timely_response, :consumer_disputed, :complaint_id, :created_at, :updated_at
+json.url consumer_complaint_url(consumer_complaint, format: :json)

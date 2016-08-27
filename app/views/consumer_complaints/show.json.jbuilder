@@ -1,0 +1,1 @@
+json.partial! "consumer_complaints/consumer_complaint", consumer_complaint: @consumer_complaint

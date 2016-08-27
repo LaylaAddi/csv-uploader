@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+        <%= @company.date_received %>
+        <%= @company.product %>
+        <%= @company.sub_product %>
+        <%= @company.issue %>
+        <%= @company.sub_issue %>
+        <%= @company.company %>
+        <%= @company.state %>
+        <%= @company.zip_code %>
+        <%= @company.tags %>
+        <%= @company.consumer_consent_provided %>
+        <%= @company.submitted_via %>
+        <%= @company.date_sent_to_company %>        
+        <%= @company.company_response_to_consumer%>
+        <%= @company.timely_response %>
+
+<%= link_to 'Edit', edit_company_path(@company) %> |
+<%= link_to 'Back', companies_path %>
+
+

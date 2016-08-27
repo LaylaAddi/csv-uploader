@@ -1,0 +1,24 @@
+<%= simple_form_for(@company) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+        <%= f.input :date_received , order: [:month, :day, :year], start_year: 1930 %>
+        <%= f.input :product %>
+        <%= f.input :sub_product %>
+        <%= f.input :issue %>
+        <%= f.input :sub_issue %>
+        <%= f.input :company %>
+        <%= f.input :state %>
+        <%= f.input :zip_code %>
+        <%= f.input :tags %>
+        <%= f.input :consumer_consent_provided %>
+        <%= f.input :submitted_via %>
+        <%= f.input :date_sent_to_company, order: [:month, :day, :year], start_year: 1930 %>       
+        <%= f.input :company_response_to_consumer %>
+        <%= f.input :timely_response %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

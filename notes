@@ -1,0 +1,46 @@
+"Strip using google docs to remove upload errors"
+
+
+model
+
+class ConsumerComplaint < ApplicationRecord
+
+	def self.import(file)	
+  	CSV.foreach(file.path, headers: true) do |row|
+    	ConsumerComplaint.create! row.to_hash
+  	end
+  end
+end
+
+
+index input
+
+<h4>Import Complaints</h4> 
+
+<%= form_tag import_consumer_complaints_path, multipart: true do %>
+  <%= file_field_tag :file %>
+    <%= submit_tag "Upload Complaints" %>
+
+<% end %>
+
+
+controller 
+
+  def import
+    ConsumerComplaint.import(params[:file])
+    redirect_to consumer_complaints_path, notice: 'Consumer complaint was successfully uploaded.'
+  end 
+
+routes
+
+  resources :consumer_complaints do
+    collection {post :import}
+  end
+
+  application.rb under config
+
+  require 'csv'
+  config.middleware.use 'Utf8Sanitizer'
+
+
+

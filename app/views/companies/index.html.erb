@@ -1,0 +1,66 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Companies</h1>
+
+<table class="table table-bordered table-condensed table-responsive">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Date received</th>
+      <th>Product</th>
+      <th>sub product</th>
+      <th>issue</th>
+      <th>sub issue</th>
+      <th>company</th>
+      <th>state</th>
+      <th>zip code</th>
+      <th>Tags</th>
+      <th>consumer consent provided</th>
+      <th>submitted by</th>
+      <th>Date sent to company</th>
+      <th>Company response to consumer</th>
+      <th>timely response</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  tags	d	submitted_via	d	c	
+
+
+  <tbody>
+    <% @companies.each do |company| %>
+      <tr>
+        <td><%= company.id %></td>
+        <td><%= company.date_received %></td>
+        <td><%= company.product %></td>
+        <td><%= company.sub_product %></td>
+        <td><%= company.issue %></td>
+        <td><%= company.sub_issue %></td>
+        <td><%= company.company %></td>
+        <td><%= company.state %></td>
+        <td><%= company.zip_code %></td>
+        <td><%= company.tags %></td>
+        <td><%= company.consumer_consent_provided %></td>
+        <td><%= company.submitted_via %></td>
+        <td><%= company.date_sent_to_company %></td>        
+        <td><%= company.company_response_to_consumer%></td>
+        <td><%= company.timely_response %></td>
+        <td><%= link_to 'Show', company %></td>
+        <td><%= link_to 'Edit', edit_company_path(company) %></td>
+        <td><%= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<h4>Import Companies</h4> 
+
+<%= form_tag import_companies_path, multipart: true do %>
+  <%= file_field_tag :file %>
+    <%= submit_tag "Upload Companies" %>
+<% end %>
+
+<%= link_to 'New Company', new_company_path %>
+

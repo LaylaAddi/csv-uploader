@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sheets</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application' %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+
+  <body>
+    <%= render "layouts/navigation" %>
+    <div class="container">
+    <%= yield %>
+    </div>
+  </body>
+</html>

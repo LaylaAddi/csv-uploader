@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date_received: 2016-08-27
+  productsub_productissuesub_issuecompanystatezip_code: MyString
+  tagsconsumer_consent_provided: 
+
+two:
+  date_received: 2016-08-27
+  productsub_productissuesub_issuecompanystatezip_code: MyString
+  tagsconsumer_consent_provided: 

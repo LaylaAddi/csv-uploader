@@ -1,0 +1,1 @@
+json.array! @consumer_complaints, partial: 'consumer_complaints/consumer_complaint', as: :consumer_complaint
